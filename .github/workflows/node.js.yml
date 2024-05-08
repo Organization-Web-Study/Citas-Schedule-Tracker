@@ -2,9 +2,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "develop" ]
-  pull_request:
-    branches: [ "develop" ]
+    branches: [ develop ]
 
 jobs:
   build:
@@ -14,14 +12,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Cache dependencies
-      uses: actions/cache@v2
-      with:
-        path: backend/node_modules
-        key: ${{ runner.os }}-npm-${{ hashFiles('backend/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-npm-
-
     - name: Install Dependencies
       run: npm ci
       working-directory: backend
@@ -29,11 +19,6 @@ jobs:
     - name: Build Backend
       run: npm run build
       working-directory: backend
-
-    - name: Stop process on port 3000
-      run: |
-        sudo kill -9 $(sudo lsof -t -i:3000) || true
-      shell: bash
 
     - name: Start Backend
       run: npm run start
