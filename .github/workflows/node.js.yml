@@ -17,9 +17,12 @@ jobs:
       working-directory: backend
 
     - name: Build Backend
-      run: npm run build
+      run: npm run build --if-present
       working-directory: backend
 
     - name: Start Backend
       run: npm run start
       working-directory: backend
+
+    - name: reload m2
+      run: pm2 reload 0
