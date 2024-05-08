@@ -14,6 +14,6 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('', app, document);
   //cambiar el puto de escucha si estas usando tambien el frontend
-  await app.listen(3005);
+  await app.listen(3000);
 }
 bootstrap();
