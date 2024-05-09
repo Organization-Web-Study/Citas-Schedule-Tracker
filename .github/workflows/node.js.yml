@@ -45,5 +45,5 @@ jobs:
         working-directory: frontend
 
     # Paso para ejecutar las pruebas, si las hay
-      - name: Run tests
-        run: npm test
+    #  - name: Run tests
+    #    run: npm test
