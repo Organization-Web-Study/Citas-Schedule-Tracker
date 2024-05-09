@@ -14,12 +14,27 @@ export default function NavP() {
   return (
     <div className="flex justify-end p-2 gap-2">
       <SignedOut>
-        <SignInButton>Ingresar</SignInButton>
-        <SignUpButton>Registrarse</SignUpButton>
+        <SignInButton />
       </SignedOut>
       <SignedIn>
-        <UserButton afterSignOutUrl="/" />
+        <UserButton afterSignOutUrl="/"  />
       </SignedIn>
     </div>
   );
 }
+
+{/* <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn> */}
+
+
+      //       <SignedOut>
+      //   <SignInButton>Ingresar</SignInButton>
+      //   <SignUpButton>Registrarse</SignUpButton>
+      // </SignedOut>
+      // <SignedIn>
+      //   <UserButton afterSignOutUrl="/" />
+      // </SignedIn>
