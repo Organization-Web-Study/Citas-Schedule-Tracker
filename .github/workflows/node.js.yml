@@ -20,30 +20,15 @@ jobs:
         with:
           node-version: 20
 
-    # Paso para instalar las dependencias del backend de Nest.js
       - name: Install dependencies for Nest.js backend
         run: npm install
         working-directory: backend
 
-    # Paso para ejecutar el servidor del backend de Nest.js en segundo plano
       - name: Start Nest.js server
         run: npm run start &
         working-directory: backend
 
-    # Paso para esperar a que el servidor del backend esté en funcionamiento
       - name: Wait for Nest.js server to start
         run: sleep 10
 
-    # Paso para instalar las dependencias del frontend de Next.js
-      #- name: Install dependencies for Next.js frontend
-      #  run: npm install
-      #  working-directory: frontend
-
-    # Paso para construir el frontend de Next.js
-      #- name: Build Next.js frontend
-      #  run: npm run build
-      #  working-directory: frontend
-
-    # Paso para ejecutar las pruebas, si las hay
-    #  - name: Run tests
-    #    run: npm test
+        
