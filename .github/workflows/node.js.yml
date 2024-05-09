@@ -19,6 +19,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+        # Cambio del directorio de trabajo al directorio raíz del repositorio
+    - name: Change directory to repository root
+      run: cd $GITHUB_WORKSPACE 
+      
     # Paso para imprimir el contenido del directorio actual
     - name: Print current directory
       run: ls -al
