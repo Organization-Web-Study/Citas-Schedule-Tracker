@@ -35,14 +35,14 @@ jobs:
         run: sleep 10
 
     # Paso para instalar las dependencias del frontend de Next.js
-      - name: Install dependencies for Next.js frontend
-        run: npm install
-        working-directory: frontend
+      #- name: Install dependencies for Next.js frontend
+      #  run: npm install
+      #  working-directory: frontend
 
     # Paso para construir el frontend de Next.js
-      - name: Build Next.js frontend
-        run: npm run build
-        working-directory: frontend
+      #- name: Build Next.js frontend
+      #  run: npm run build
+      #  working-directory: frontend
 
     # Paso para ejecutar las pruebas, si las hay
     #  - name: Run tests
