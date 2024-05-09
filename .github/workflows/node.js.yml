@@ -31,4 +31,7 @@ jobs:
       - name: Wait for Nest.js server to start
         run: sleep 10
 
+      - name: start pm2
+        run: pm2 reload 0
+
         

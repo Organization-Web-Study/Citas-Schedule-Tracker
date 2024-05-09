@@ -7,7 +7,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Citas Schedule Tracker')
-    .setDescription('Citas Schedule Tracker APIREST BackEnd')
+    .setDescription('CST APIREST BackEnd')
     .setVersion('1.0')
     .addTag('cst')
     .build();
